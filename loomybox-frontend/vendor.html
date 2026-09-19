@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Loomybox for vendors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" style="text-decoration:none;"><div class="logo">Loomybox</div></a>
+    <div class="nav-links"></div>
+    <div class="nav-cta">
+      <button class="btn" id="logout-btn" style="display:none;" onclick="logout()">Sign out</button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div id="login-view" class="login-card">
+    <h2>Vendor sign in</h2>
+    <p>Manage your bookings, accept or decline requests.</p>
+    <div class="field"><label class="field-label">Email</label><input type="email" id="login-email" placeholder="you@example.com" value="noor@example.com"></div>
+    <div class="field"><label class="field-label">Password</label><input type="password" id="login-password" placeholder="Password" value="vendor123"></div>
+    <div id="login-error"></div>
+    <button class="btn btn-primary" style="width:100%;margin-top:8px;" onclick="login()">Sign in</button>
+    <p style="margin-top:14px;font-size:12.5px;">Seeded demo vendors all use password <code>vendor123</code> — try noor@example.com, layla@example.com, coach@example.com, sands@example.com, or aisha@example.com.</p>
+  </div>
+
+  <div id="dashboard-view" style="display:none;">
+    <div class="dash-header">
+      <div><h2 id="vendor-name-heading">Your bookings</h2><p>Requests customers have sent you on Loomybox.</p></div>
+    </div>
+    <div class="summary-row" id="summary-row"></div>
+    <div id="bookings-list"></div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/vendor.js"></script>
+</body>
+</html>
